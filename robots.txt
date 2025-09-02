@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://managementbricks.com/sitemap.xml
+
+# Disallow admin or sensitive areas (add as needed)
+# Disallow: /admin/
+# Disallow: /config.php
+# Disallow: /contact.php
+
+# SEO-friendly robots.txt for ManagementBricks
+# Generated: 2025
