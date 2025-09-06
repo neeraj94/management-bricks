@@ -10,6 +10,10 @@ header('X-XSS-Protection: 1; mode=block');
 // Include configuration
 require_once 'config.php';
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 // Enable error reporting for debugging (remove in production)
 // error_reporting(E_ALL);
 // ini_set('display_errors', 1);
@@ -51,7 +55,7 @@ class ContactFormHandler {
     
     private function validateRequest() {
         // Check for required fields
-        $requiredFields = ['name', 'email', 'subject', 'message'];
+        $requiredFields = ['name', 'email', 'phone', 'message'];
         foreach ($requiredFields as $field) {
             if (!isset($_POST[$field]) || empty(trim($_POST[$field]))) {
                 return false;
@@ -101,7 +105,7 @@ class ContactFormHandler {
         // Sanitize inputs
         $this->formData['name'] = $this->sanitizeString($_POST['name']);
         $this->formData['email'] = $this->sanitizeEmail($_POST['email']);
-        $this->formData['subject'] = $this->sanitizeString($_POST['subject']);
+        $this->formData['phone'] = $this->sanitizeString($_POST['phone']);
         $this->formData['message'] = $this->sanitizeString($_POST['message']);
         
         // Validate name
@@ -122,9 +126,9 @@ class ContactFormHandler {
             $this->errors[] = 'Email address is too long.';
         }
         
-        // Validate subject
-        if (strlen($this->formData['subject']) < 3 || strlen($this->formData['subject']) > 200) {
-            $this->errors[] = 'Subject must be between 3 and 200 characters.';
+        // Validate phone
+        if (!preg_match('/^[0-9+()\s-]{7,}$/', $this->formData['phone'])) {
+            $this->errors[] = 'Please enter a valid phone number.';
         }
         
         // Validate message
@@ -182,10 +186,6 @@ class ContactFormHandler {
     
     private function sendEmailsWithPHPMailer() {
         require_once 'vendor/autoload.php';
-        
-        use PHPMailer\PHPMailer\PHPMailer;
-        use PHPMailer\PHPMailer\SMTP;
-        use PHPMailer\PHPMailer\Exception;
         
         try {
             $mail = new PHPMailer(true);
@@ -358,8 +358,8 @@ class ContactFormHandler {
                         <div class='value'>{$this->formData['email']}</div>
                     </div>
                     <div class='field'>
-                        <div class='label'>Subject:</div>
-                        <div class='value'>{$this->formData['subject']}</div>
+                        <div class='label'>Phone:</div>
+                        <div class='value'>{$this->formData['phone']}</div>
                     </div>
                     <div class='field'>
                         <div class='label'>Message:</div>
@@ -385,7 +385,7 @@ class ContactFormHandler {
         return "NEW CONTACT FORM SUBMISSION - ManagementBricks Website\n\n" .
                "Name: {$this->formData['name']}\n" .
                "Email: {$this->formData['email']}\n" .
-               "Subject: {$this->formData['subject']}\n\n" .
+               "Phone: {$this->formData['phone']}\n\n" .
                "Message:\n{$this->formData['message']}\n\n" .
                "---\n" .
                "Submission Details:\n" .
@@ -420,8 +420,8 @@ class ContactFormHandler {
                     <p>Dear {$this->formData['name']},</p>
                     
                     <div class='message'>
-                        <p>Thank you for reaching out to ManagementBricks. We have successfully received your message regarding: <strong>{$this->formData['subject']}</strong></p>
-                        
+                        <p>Thank you for reaching out to ManagementBricks. We have successfully received your message.</p>
+
                         <p>Our team will review your inquiry and get back to you within 24-48 hours. We appreciate your interest in our services and look forward to helping you achieve your career development goals.</p>
                     </div>
                     
@@ -454,7 +454,7 @@ class ContactFormHandler {
     private function getUserEmailBodyText() {
         return "Thank you for contacting ManagementBricks!\n\n" .
                "Dear {$this->formData['name']},\n\n" .
-               "Thank you for reaching out to ManagementBricks. We have successfully received your message regarding: {$this->formData['subject']}\n\n" .
+               "Thank you for reaching out to ManagementBricks. We have successfully received your message.\n\n" .
                "Our team will review your inquiry and get back to you within 24-48 hours. We appreciate your interest in our services and look forward to helping you achieve your career development goals.\n\n" .
                "In the meantime, feel free to explore our services:\n" .
                "• Psychometric Assessment\n" .
