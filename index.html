@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -44,9 +44,6 @@
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">Contact</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link nav__link--login">Login</a>
-                    </li>
                 </ul>
                 
                 <div class="nav__close" id="nav-close">✕</div>
@@ -59,104 +56,58 @@
     <main class="main">
         <!-- Hero Section -->
         <section class="hero" id="home">
-            <div class="hero__slider">
-                <div class="hero__slide active">
-                    <div class="hero__bg" style="background-image: url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"></div>
-                    <div class="hero__overlay"></div>
-                    <div class="hero__content container">
-                        <h1 class="hero__title">
-                            <span class="hero__title-line">Empowering</span>
-                            <span class="hero__title-line">Leaders of Tomorrow</span>
-                        </h1>
-                        <p class="hero__description">Transform your potential through comprehensive psychometric assessment, professional interview preparation, and cognitive skill development.</p>
-                        <div class="hero__buttons">
-                            <a href="#services" class="btn btn--primary">Explore Services</a>
-                            <a href="#contact" class="btn btn--secondary">Contact Us</a>
-                        </div>
-                    </div>
+            <div class="hero__bg" style="background-image: url('https://images.unsplash.com/photo-1505692794403-34d4982f88aa?q=80&w=1600&auto=format&fit=crop')"></div>
+            <div class="hero__overlay"></div>
+            <div class="hero__content container">
+                <h1 class="hero__title">
+                    <span class="hero__title-line">Empowering</span>
+                    <span class="hero__title-line">Leaders of Tomorrow</span>
+                </h1>
+                <p class="hero__description">Transform your potential through comprehensive psychometric assessment, professional interview preparation, and cognitive skill development.</p>
+                <div class="hero__buttons">
+                    <a href="#services" class="btn btn--primary">Explore Services</a>
+                    <a href="#contact" class="btn btn--secondary">Contact Us</a>
                 </div>
-                
-                <div class="hero__slide">
-                    <div class="hero__bg" style="background-image: url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"></div>
-                    <div class="hero__overlay"></div>
-                    <div class="hero__content container">
-                        <h1 class="hero__title">
-                            <span class="hero__title-line">Building</span>
-                            <span class="hero__title-line">Career Excellence</span>
-                        </h1>
-                        <p class="hero__description">Discover your strengths, enhance your skills, and prepare for professional success with our evidence-based assessment tools.</p>
-                        <div class="hero__buttons">
-                            <a href="#services" class="btn btn--primary">Explore Services</a>
-                            <a href="#contact" class="btn btn--secondary">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero__slide">
-                    <div class="hero__bg" style="background-image: url('https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')"></div>
-                    <div class="hero__overlay"></div>
-                    <div class="hero__content container">
-                        <h1 class="hero__title">
-                            <span class="hero__title-line">Shaping</span>
-                            <span class="hero__title-line">Future Success</span>
-                        </h1>
-                        <p class="hero__description">Comprehensive student development programs designed to build confidence, clarity, and competency for the modern workplace.</p>
-                        <div class="hero__buttons">
-                            <a href="#services" class="btn btn--primary">Explore Services</a>
-                            <a href="#contact" class="btn btn--secondary">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero__controls">
-                <button class="hero__prev" aria-label="Previous slide">‹</button>
-                <div class="hero__indicators">
-                    <span class="hero__indicator active" data-slide="0"></span>
-                    <span class="hero__indicator" data-slide="1"></span>
-                    <span class="hero__indicator" data-slide="2"></span>
-                </div>
-                <button class="hero__next" aria-label="Next slide">›</button>
             </div>
         </section>
 
         <!-- Services Section -->
         <section class="services section" id="services">
             <div class="container">
-                <h2 class="section__title">Our Services</h2>
+                <h2 class="section__title services__title">Our Services</h2>
                 <p class="section__subtitle">Comprehensive solutions for personal and professional development</p>
                 
                 <div class="services__grid">
                     <article class="service__card fade-in">
                         <div class="service__image">
-                            <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="Psychometric Assessment - Understanding personality traits and emotional intelligence" class="service__img">
+                            <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="Psychometric Assessment" class="service__img">
                         </div>
                         <div class="service__content">
                             <h3 class="service__title">Psychometric Assessment</h3>
                             <p class="service__description">Gain deeper insights into your personality traits, emotional intelligence, and cognitive preferences through validated psychometric tools and structured assessments.</p>
-                            <a href="services/psychometric-assessment.html" class="service__link">Learn More →</a>
+                            <a href="services/psychometric-assessment.html" class="service__link">Learn More</a>
                         </div>
                     </article>
                     
                     <article class="service__card fade-in">
                         <div class="service__image">
-                            <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="Mock Interview - Professional interview preparation and feedback" class="service__img">
+                            <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="Mock Interview" class="service__img">
                         </div>
                         <div class="service__content">
                             <h3 class="service__title">Mock Interview</h3>
                             <p class="service__description">Simulate real interview scenarios with recorded sessions and personalized feedback to enhance your confidence and professional presentation skills.</p>
-                            <a href="services/mock-interview.html" class="service__link">Learn More →</a>
+                            <a href="services/mock-interview.html" class="service__link">Learn More</a>
                         </div>
                     </article>
                     
                     <article class="service__card fade-in">
                         <div class="service__image">
-                            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="Aptitude Testing - Cognitive skill assessment and development" class="service__img">
+                            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop" alt="Aptitude Testing" class="service__img">
                         </div>
                         <div class="service__content">
                             <h3 class="service__title">Aptitude Testing</h3>
                             <p class="service__description">Evaluate and enhance core cognitive abilities essential for academic and professional success through comprehensive aptitude assessments.</p>
-                            <a href="services/aptitude-testing.html" class="service__link">Learn More →</a>
+                            <a href="services/aptitude-testing.html" class="service__link">Learn More</a>
                         </div>
                     </article>
                 </div>
@@ -164,25 +115,21 @@
         </section>
 
         <!-- About Section -->
-        <section class="about section" id="about">
+        <section class="about section" id="about" style="background-image: url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1600&auto=format&fit=crop')">
+            <div class="about__overlay"></div>
             <div class="container">
-                <div class="about__grid">
-                    <div class="about__content">
-                        <h2 class="section__title">About ManagementBricks</h2>
-                        <p class="about__text">At ManagementBricks, we believe that real-world success stems not only from academic excellence but from a deep understanding of one's own strengths, emotional intelligence, adaptability, and career readiness. We specialize in crafting transformative student development experiences that build confidence, clarity, and competency.</p>
-                        
-                        <p class="about__text">We provide a comprehensive Student Profiling & Career Readiness toolkit designed specifically for students, enhancing employability, self-awareness, and presentation skills through a 360° Psychometric & Career Aptitude Evaluation Model.</p>
-                        
-                        <div class="about__mission">
-                            <h3 class="about__mission-title">Our Mission</h3>
-                            <p class="about__mission-text">To foster a mindset where success is defined not by the initial salary package, but by the ability to build a fulfilling and resilient career path.</p>
-                        </div>
-                        
-                        <a href="about.html" class="btn btn--primary">Learn More</a>
-                    </div>
+                <div class="about__content">
+                    <h2 class="about__title">
+                        <span class="about__title-text">About </span>
+                        <span class="about__title-brand">ManagementBricks</span>
+                    </h2>
                     
-                    <div class="about__image">
-                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" alt="Professional development and leadership training" class="about__img">
+                    <p class="about__text">At ManagementBricks, we believe that real-world success stems not only from academic excellence but from a deep understanding of one's own strengths, emotional intelligence, adaptability, and career readiness. We specialize in crafting transformative student development experiences that build confidence, clarity, and competency.</p>
+                    
+                    <p class="about__text">We provide a comprehensive Student Profiling & Career Readiness toolkit designed specifically for students, enhancing employability, self-awareness, and presentation skills through a 360° Psychometric & Career Aptitude Evaluation Model.</p>
+                    
+                    <div class="about__button">
+                        <a href="about.html" class="btn btn--secondary">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -194,66 +141,39 @@
                 <h2 class="section__title">Contact Us</h2>
                 <p class="section__subtitle">Ready to transform your career potential? Get in touch with us today.</p>
                 
-                <div class="contact__grid">
-                    <div class="contact__form-container">
-                        <form class="contact__form" id="contact-form">
-                            <div class="form__group">
-                                <label for="name" class="form__label">Full Name *</label>
-                                <input type="text" id="name" name="name" class="form__input" required>
-                            </div>
-                            
-                            <div class="form__group">
-                                <label for="email" class="form__label">Email Address *</label>
-                                <input type="email" id="email" name="email" class="form__input" required>
-                            </div>
-                            
-                            <div class="form__group">
-                                <label for="subject" class="form__label">Subject *</label>
-                                <input type="text" id="subject" name="subject" class="form__input" required>
-                            </div>
-                            
-                            <div class="form__group">
-                                <label for="message" class="form__label">Message *</label>
-                                <textarea id="message" name="message" class="form__textarea" rows="6" required></textarea>
-                            </div>
-                            
-                            <!-- Honeypot field for spam protection -->
-                            <input type="text" name="honeypot" style="display: none;">
-                            <input type="hidden" name="form_time" id="form_time">
-                            
-                            <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
-                                <span class="btn__text">Send Message</span>
-                                <span class="btn__spinner" style="display: none;">⟳</span>
-                            </button>
-                        </form>
+                <div class="contact__form-container">
+                    <form class="contact__form" id="contact-form">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form__input" required>
+                        </div>
                         
-                        <div class="form__message" id="form-message"></div>
-                    </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="subject" class="form__label">Subject *</label>
+                            <input type="text" id="subject" name="subject" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message *</label>
+                            <textarea id="message" name="message" class="form__textarea" rows="6" required></textarea>
+                        </div>
+                        
+                        <!-- Honeypot field for spam protection -->
+                        <input type="text" name="honeypot" style="display: none;">
+                        <input type="hidden" name="form_time" id="form_time">
+                        
+                        <button type="submit" class="btn btn--primary contact__submit" id="submit-btn">
+                            <span class="btn__text">Send Message</span>
+                            <span class="btn__spinner" style="display: none;">⟳</span>
+                        </button>
+                    </form>
                     
-                    <div class="contact__info">
-                        <div class="contact__image">
-                            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop" alt="Contact ManagementBricks - Professional consultation" class="contact__img">
-                        </div>
-                        
-                        <div class="contact__details">
-                            <div class="contact__item">
-                                <h4 class="contact__item-title">Company</h4>
-                                <p class="contact__item-text">ManagementBricks Pvt. Ltd.</p>
-                            </div>
-                            
-                            <div class="contact__item">
-                                <h4 class="contact__item-title">Location</h4>
-                                <p class="contact__item-text">Hyderabad, India</p>
-                            </div>
-                            
-                            <div class="contact__item">
-                                <h4 class="contact__item-title">Email</h4>
-                                <p class="contact__item-text">
-                                    <a href="mailto:info@managementbricks.com">info@managementbricks.com</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="form__message" id="form-message"></div>
                 </div>
             </div>
         </section>
@@ -283,7 +203,7 @@
                 <div class="footer__contact">
                     <h4 class="footer__title">Contact Info</h4>
                     <p class="footer__text">ManagementBricks Pvt. Ltd.</p>
-                    <p class="footer__text">Hyderabad, India</p>
+                    <p class="footer__text">Hazaribagh, Jharkhand, India</p>
                     <p class="footer__text">
                         <a href="mailto:info@managementbricks.com">info@managementbricks.com</a>
                     </p>
@@ -301,7 +221,6 @@
             </div>
             
             <div class="footer__bottom">
-                <div class="footer__divider"></div>
                 <p class="footer__copyright">
                     © 2025 ManagementBricks Pvt. Ltd. All rights reserved.
                 </p>
