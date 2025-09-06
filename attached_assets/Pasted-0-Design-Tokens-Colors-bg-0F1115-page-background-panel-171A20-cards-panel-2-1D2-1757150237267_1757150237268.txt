@@ -1,0 +1,213 @@
+0) Design Tokens
+
+Colors
+
+--bg: #0F1115 (page background)
+
+--panel: #171A20 (cards)
+
+--panel-2: #1D2129 (form panel)
+
+--text: #E8EAED (primary)
+
+--muted: #CFD6DF (secondary)
+
+--muted-2: #9AA6B2 (subtle)
+
+--border: #2A313B
+
+--accent: #D6B36A (gold)
+
+--accent-hover: #E2C98F
+
+Shadows: 0 22px 60px rgba(0,0,0,.45) on cards & hero CTA.
+
+Radii: 16px (cards & inputs), 22px (about card).
+
+Container: max-width 1200px, horizontal padding 20px.
+
+Font: Inter (400/500/600/700/800).
+
+Section vertical padding (desktop): 92–100px.
+
+1) Header / Navbar (sticky)
+
+Sticky header with translucent dark background rgba(15,17,21,.72) and blur (backdrop-filter: blur(10px)).
+
+Height: 64px. Bottom border: 1px solid var(--border).
+
+Left: brand text “ManagementBricks” (Inter 800).
+
+Right: nav items Home (active), Services, About, Contact.
+
+Link color: #CFD6DF; on hover/active: #FFFFFF.
+
+Active has a 2px gold underline spanning the link (bottom offset −10px).
+
+2) Hero (full-width image with gradient)
+
+Background image fills the viewport height ~460–480px on desktop.
+
+Overlay left→right gradient: linear-gradient(90deg, rgba(15,17,21,.65), rgba(15,17,21,.15)).
+
+Center a glass panel (max-width 740px, padding 28px, radius 18px):
+
+Background rgba(0,0,0,.35); border 1px solid rgba(255,255,255,.15); backdrop-filter: blur(4px); shadow token.
+
+Title (two lines, centered):
+
+Line 1: “Empowering” — white, 50px, 800.
+
+Line 2: “Leaders of Tomorrow” — gold #D6B36A, 50px, 800.
+
+Subheading (centered): copy exactly:
+
+Transform your potential through comprehensive psychometric assessment, professional interview preparation, and cognitive skill development.
+
+Color var(--muted), max-width 760px.
+
+Buttons (centered, 14px gap):
+
+Primary “Explore Services”: bg var(--accent), black text, shadow, hover --accent-hover.
+
+Secondary “Contact Us”: transparent, 1px gold border, white text.
+
+Background image similar to a modern living room (as in screenshot). If you need a placeholder: https://images.unsplash.com/photo-1505692794403-34d4982f88aa?q=80&w=1600&auto=format&fit=crop
+
+3) “Our Services” Section
+
+Title centered: “Our Services” in gold with a centered 3px gold underline (84px wide) below the text.
+
+Small subtitle (muted): “Comprehensive solutions for personal and professional development”.
+
+Three cards in a row (desktop), grid gap 24px, each card width visually matching screenshot.
+
+Card style: background: var(--panel), border: 1px solid var(--border), radius 16px, padding 24px, shadow token.
+
+Hover: translateY(−4px), border turns rgba(214,179,106,.35).
+
+Card content:
+
+Psychometric Assessment
+Body: one short paragraph (muted).
+Small Learn More button → gold outline.
+
+Mock Interview — same pattern.
+
+Aptitude Testing — same pattern.
+
+The screenshot shows small circular thumbnails; if you include images, size ~64px, 12px radius, object-fit: cover.
+
+4) About Section (frosted card over image)
+
+Background: full-width keyboard/desk image with dark vertical overlay
+linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.65)).
+
+Center a frosted glass card (max-width 900px, padding 28–32px, radius 22px, border rgba(255,255,255,.14), backdrop-filter: blur(6px), shadow token).
+
+Title: “About ManagementBricks”
+
+“About” white; “ManagementBricks” in gold.
+
+Two paragraphs (muted very light #DDE3EA) as in screenshot (use your live copy).
+
+Centered Learn More outline button in gold beneath paragraphs.
+
+Section height should allow the card to sit roughly mid-screen with generous top/bottom space like the screenshot.
+
+Background suggestion: https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1600&auto=format&fit=crop
+
+5) Contact Section
+
+Title: “Contact Us” (white), small muted line below:
+“Ready to transform your career potential? Get in touch with us today.”
+
+Form panel centered (max-width 640px): background var(--panel-2), border var(--border), radius 14px, padding 22px, shadow token.
+
+Fields (stacked): Full Name*, Email Address*, Subject*, Message*.
+
+Inputs background #14171D, border var(--border), radius 12px, padding 12px 14px.
+
+Focus: border --accent, 3px gold focus ring (rgba(214,179,106,.2)).
+
+Submit button (centered): gold background, black text, width auto (not full width on desktop).
+
+6) Footer
+
+Top border 1px solid var(--border), background --bg.
+
+4 columns grid:
+
+Brand paragraph (muted)
+
+Quick Links
+
+Contact Info (Hazaribagh, Jharkhand, India; info@managementbricks.com
+)
+
+Social icons (muted → gold on hover)
+
+Copyright (centered, muted-2):
+“© 2025 ManagementBricks Pvt. Ltd. All rights reserved.”
+
+7) Layout & Spacing
+
+Section paddings: 92–100px top & bottom on desktop; 72px tablet; 56px mobile.
+
+Container max-width 1200px, centered.
+
+Services grid:
+
+Desktop: 3 columns, gap 24px
+
+Tablet (≤1024px): 2 columns
+
+Mobile (≤640px): 1 column
+
+Hero text block top padding ≈ 120px, bottom ≈ 140px.
+
+8) Interactions & Accessibility
+
+All links and buttons have visible focus outlines (ring 2–3px gold).
+
+Text contrast ≥ 4.5:1 against backgrounds.
+
+Hover states:
+
+Buttons: gold → lighter gold
+
+Cards: lift + gold border tint
+
+Footer links: gray → gold
+
+9) Deliverables
+
+Provide one HTML file (index.html) with embedded CSS or HTML + a single CSS file.
+
+Use Inter from Google Fonts.
+
+Use the exact text strings shown above for titles, subtitle, and call-to-actions.
+
+Use placeholder Unsplash URLs given above (I’ll replace later).
+
+Desktop view must match the reference image precisely: font sizes, colors, spacing, shadows, underline width, card radius, button styles.
+
+10) Acceptance Checklist (must pass)
+
+ Sticky header with gold underline on active nav item.
+
+ Hero uses image + gradient and centered glass panel with two-line heading (second line gold).
+
+ Two CTAs (gold solid + gold outline) centered under hero text.
+
+ Services section: gold title + 84px underline, three raised dark cards, gold hover.
+
+ About: frosted glass card centered over keyboard image; title with gold word; centered “Learn More” outline button.
+
+ Contact form: dark fields, gold focus ring, gold submit button.
+
+ Footer: 4 columns, gray links that turn gold on hover, centered copyright.
+
+ Responsive at 1024px (2 columns services) and 640px (1 column).
+
+ Visual parity with the attached screenshot at desktop width.
