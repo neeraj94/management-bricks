@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  root: '.',
   server: {
     host: '0.0.0.0',
     port: 5000,
@@ -9,19 +8,20 @@ export default defineConfig({
     allowedHosts: true,
     hmr: {
       port: 5000
-    }
-  },
-  build: {
-    outDir: 'dist',
-    rollupOptions: {
-      input: {
-        main: './index.html',
-        about: './about.html',
-        'psychometric-assessment': './services/psychometric-assessment.html',
-        'mock-interview': './services/mock-interview.html',
-        'aptitude-testing': './services/aptitude-testing.html'
+    },
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true
       }
     }
   },
-  publicDir: 'public'
+  build: {
+    outDir: 'dist'
+  },
+  esbuild: {
+    jsxInject: "import React from 'react'",
+    jsxFactory: 'React.createElement',
+    jsxFragment: 'React.Fragment'
+  }
 })
