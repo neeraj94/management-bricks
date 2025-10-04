@@ -255,10 +255,11 @@ class ContactForm {
                     errorMessage = 'Please enter a valid email address';
                 }
                 break;
-            case 'subject':
-                if (value.length < 3) {
+            case 'phone':
+                const phoneRegex = /^[0-9+()\s-]{7,}$/;
+                if (!phoneRegex.test(value)) {
                     isValid = false;
-                    errorMessage = 'Subject must be at least 3 characters long';
+                    errorMessage = 'Please enter a valid phone number';
                 }
                 break;
             case 'message':
